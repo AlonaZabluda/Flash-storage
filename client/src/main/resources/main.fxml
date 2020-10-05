@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+   <children>
+      <VBox fx:id="auth" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #191C2F;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="420.0" right="420.0" top="80.0" />
+               </VBox.margin>
+            </ImageView>
+            <TextField fx:id="login" prefHeight="54.0" promptText="Login" style="-fx-background-radius: 10;">
+               <VBox.margin>
+                  <Insets bottom="30.0" left="230.0" right="230.0" top="110.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Futura Medium" size="18.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="password" prefHeight="54.0" promptText="Password" style="-fx-background-radius: 10;">
+               <VBox.margin>
+                  <Insets left="230.0" right="230.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Futura Medium" size="18.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="signUp" layoutX="10.0" layoutY="408.0" mnemonicParsing="false" onAction="#setSignUp" style="-fx-background-color: #191C2F;" text="Sign up?" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="699.0" right="230.0" top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Futura Medium" size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#logInAction" prefHeight="54.0" prefWidth="200.0" style="-fx-background-color: #FD5200; -fx-background-radius: 10;" text="Log in" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="410.0" right="410.0" top="50.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Futura Medium" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <VBox fx:id="storage" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #191C2F;">
+         <children>
+            <HBox nodeOrientation="RIGHT_TO_LEFT" spacing="680.0">
+               <children>
+                  <Button fx:id="buttonExit" mnemonicParsing="false" onAction="#buttonExit" prefHeight="27.0" prefWidth="61.0" style="-fx-background-color: #191C2F;" text="Exit" textFill="WHITE">
+                     <font>
+                        <Font name="Futura Medium" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#openAccess" prefHeight="44.0" prefWidth="124.0" style="-fx-background-radius: 10; -fx-background-color: #191C2F;" text="+ add user" textFill="#fd5200">
+                     <font>
+                        <Font name="Futura Medium" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets right="82.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox nodeOrientation="LEFT_TO_RIGHT" spacing="50.0">
+               <VBox.margin>
+                  <Insets left="92.0" top="19.0" />
+               </VBox.margin>
+               <children>
+                  <HBox nodeOrientation="LEFT_TO_RIGHT" spacing="10.0">
+                     <children>
+                        <TextField fx:id="pathFieldLeft" prefHeight="44.0" prefWidth="340.0" style="-fx-background-radius: 10;">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <font>
+                              <Font name="Futura Medium" size="12.0" />
+                           </font></TextField>
+                        <Button mnemonicParsing="false" onAction="#clientButtonUp" prefHeight="44.0" prefWidth="50.0" style="-fx-background-color: #FD5200; -fx-background-radius: 10;" text="Up" textFill="WHITE">
+                           <font>
+                              <Font name="Futura Medium" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox nodeOrientation="LEFT_TO_RIGHT" spacing="10.0">
+                     <children>
+                        <TextField fx:id="pathFieldRight" prefHeight="44.0" prefWidth="340.0" style="-fx-background-radius: 10;">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <font>
+                              <Font name="Futura Medium" size="12.0" />
+                           </font></TextField>
+                        <Button mnemonicParsing="false" onAction="#storageButtonUp" prefHeight="44.0" prefWidth="50.0" style="-fx-background-color: #FD5200; -fx-background-radius: 10;" text="Up" textFill="WHITE">
+                           <font>
+                              <Font name="Futura Medium" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox nodeOrientation="LEFT_TO_RIGHT" spacing="50.0">
+               <VBox.margin>
+                  <Insets left="92.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <HBox nodeOrientation="LEFT_TO_RIGHT">
+                     <children>
+                        <TableView fx:id="clientTable" prefHeight="530.0" prefWidth="400.0" style="-fx-background-radius: 10; -fx-border-radius: 10;">
+                        </TableView>
+                     </children>
+                  </HBox>
+                  <HBox nodeOrientation="LEFT_TO_RIGHT">
+                     <children>
+                        <TableView fx:id="storageTable" prefHeight="530.0" prefWidth="400.0" style="-fx-background-radius: 10; -fx-border-radius: 10;">
+                        </TableView>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox nodeOrientation="LEFT_TO_RIGHT" spacing="50.0">
+               <children>
+                  <Button fx:id="uploadBtn" focusTraversable="false" maxWidth="-Infinity" onAction="#uploadFile" prefHeight="50.0" prefWidth="400.0" style="-fx-background-color: #FD5200; -fx-background-radius: 10;" text="Upload" textFill="WHITE">
+                     <font>
+                        <Font name="Futura Medium" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="downloadBtn" focusTraversable="false" maxWidth="-Infinity" onAction="#downloadFile" prefHeight="50.0" prefWidth="400.0" style="-fx-background-color: #FD5200; -fx-background-radius: 10;" text="Download" textFill="WHITE">
+                     <font>
+                        <Font name="Futura Medium" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets left="92.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>
