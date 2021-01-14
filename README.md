@@ -30,10 +30,10 @@ To deploy database from generated sql file I attached link to [mysqldump](https:
 
 ## Supplement
 
-- For networking was used **Netty**.
-- The graphical part was done using **JavaFX**.
-- To store info about users and open access to directories was used **MySQL**;
-- Logging utility - **Log4j**;
-- Build system: **Maven**.
+- **Netty** - was used for networking;
+- **JavaFX** - the graphical part was done using this software platform;
+- **MySQL** - to store info about users and open access to directories;
+- **Log4j** - logging utility;
+- **Maven** - build system.
 
 
